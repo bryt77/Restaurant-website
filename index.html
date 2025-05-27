@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>Restaurant website</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <p><i class="fa-solid fa-utensils"></i> FoodMan</p>  
+                </div>
+                <div class="navlinks">
+                    <a class="menu" href="#home">Home</a>
+                    <a class="menu" href="#menu">Menu</a>
+                    <a class="menu" href="#about">About</a>
+                    <a class="hamburger-icon" onclick="showSidebar()" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <rect y="4" width="24" height="2" rx="1" fill="currentColor"/>
+                        <rect y="11" width="24" height="2" rx="1" fill="currentColor"/>
+                        <rect y="18" width="24" height="2" rx="1" fill="currentColor"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="sidebar">
+                    <a class="close-icon" onclick="hideSidebar()" href="#">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </a>
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home">
+                <div class="title">
+                    <h3>Delicious Meals</h3>
+                    <h3>Await You</h3>
+                </div>
+                <div class="buttons">
+                    <button>Book A Table</button>
+                    <button>View Menu</button>
+                </div>
+            </section>
+
+            <section id="menu">
+                <h2>Featured Dishes</h2>
+                <div class="featured-dishes">
+                    <div class="dishes" onclick="showAssorted_Dishes()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/assorted/barbecue chicken friedrice.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Assorted</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showRolls()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/rolls/cheese rolls.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Rolls</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showPizza()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/pizza/greenleaf cheese pizza.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Pizza</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showCakes()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/cake/yellow cream cupcake.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Cake</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showPasta()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/pasta/red sauce pasta.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Pasta</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showSandwich()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/sandwiches/baked tomato sandwich.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Sandwich</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showNoodles()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/noodles/italian lemonade noodles.webp">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Noodles</p>
+                        </div>
+                    </div>
+                    <div class="dishes" onclick="showSalad()">
+                        <div class="dish-img-container">
+                            <img class="dish-img" src="images/salad/vegetable salad.jpg">
+                        </div>
+                        <div class="description">
+                            <p class="food-class">Salad</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="top_menu">
+                <h2>Top Dishes</h2>
+                <div class="top-dishes-box">
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/vegetable beef rice.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Vegetable Beef Rice</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$30.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/italian lemonade noodles.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Italian Lemonade Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pizza/italian pizza.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Italian Pizza</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/chicken_rolls_2.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Chicken Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/strawberry salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Strawberry Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/ham cheese sandwich.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Ham Cheese Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/meat sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Meat Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$17.00</p>
+                        </div>
+                    </div>
+                    <div class="top-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/caesar salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Caesar Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--dish categories-->
+            <section id="assorted_menu">
+                <h2>Assorted Dishes</h2>
+                <div class="assorted">
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/vegetable beef rice.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Vegetable Beef Rice</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$30.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/jollof rice veggies with goat meat.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Jollof Rice Veggies With Goat Meat</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/jollof red beans.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Jollof Red Beans</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/potato fries.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Potato Fries</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/safron rice with vegetable.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Safron Rice With Vegetables</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/barbecue chicken friedrice.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Barbecue Chicken Friedrice</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$25.00</p>
+                        </div>
+                    </div>
+                    <div class="assorted-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/assorted/rice and vegetables.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Rice and Vegetables</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rolls_menu">
+                <h2>Rolls</h2>
+                <div class="rolls">
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/chicken_rolls_2.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Chicken Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/cheese rolls.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Cheese Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$17.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/egg rolls.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Egg Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$12.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/fried spring rolls.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Fried Spring Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/rolls_1.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Snow White Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/suchi rolls.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Suchi Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="rolls-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/rolls/veg rolls.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Veg Roll</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pizza_menu">
+                <h2>Pizza Dishes</h2>
+                <div class="pizza">
+                    <div class="pizza-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pizza/italian pizza.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Italian Pizza</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="pizza-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pizza/classic pepperoni pizza.avif">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Classic Pepperoni Pizza</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="pizza-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pizza/greenleaf cheese pizza.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Greenleaf Cheese Pizza</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$23.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id=cake_menu>
+                <h2>Cakes</h2>
+                <div class="cake">
+                    <div class="cake-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/cake/cheese-cake.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Cheese Cake</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="cake-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/cake/chocolate cake.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Chocolate Cake</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$12.00</p>
+                        </div>
+                    </div>
+                    <div class="cake-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/cake/chocolate strawerry cake.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Choco Strawberry Cake</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="cake-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/cake/straberry cake.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Strawberry Cake</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$8.00</p>
+                        </div>
+                    </div>
+                    <div class="cake-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/cake/yellow cream cupcake.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Yellowcream Cupcake</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="pasta_menu">
+                <h2>Pasta Dishes</h2>
+                <div class="pasta">
+                    <div class="pasta-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pasta/red sauce pasta.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Red Sauce Pasta</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="pasta-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pasta/rolled pasta.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Rolled Pasta</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="pasta-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/pasta/sauced penn pasta.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Sauced Penn Pasta</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$17.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sandwich_menu">
+                <h2>Sandwich Dishes</h2>
+                <div class="sandwich">
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/baked lettuce sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Baked Lettuce Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/baked tomato sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Baked Tomato Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/chicken_sandwich.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Chicken Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$13.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/clubhouse sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Clubhouse Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/greenleaf onion sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Greenleaf Onion Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$17.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/ham cheese sandwich.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Ham Cheese Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/lettuce tomato burger.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Lettuce Tomato Burger</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$13.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/lettuce tomato sandwich.avif">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Lettuce Tomato Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$10.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/meat sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Meat Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$17.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/milk sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Milk Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/turkey_bagel_sandwich.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Turkey Bagel Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="sandwich-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/sandwiches/vegetable sandwich.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Vegetable Sandwich</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$15.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="noodles_menu">
+                <h2>Noodles</h2>
+                <div class="noodles">
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/italian lemonade noodles.webp">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Italian Lemonade Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/mushroom noodles.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Mushroom Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$13.00</p>
+                        </div>
+                    </div>
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/pepperoni noodles.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Pepperoni Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$22.00</p>
+                        </div>
+                    </div>
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/redhot noodles.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Redhot Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/shrimp noodles.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Shrimp Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$23.00</p>
+                        </div>
+                    </div>
+                    <div class="noodles-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/noodles/veg noodles.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Veg Noodles</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="salad_menu">
+                <h2>Salad Dishes</h2>
+                <div class="salad">
+                    <div class="salad-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/caesar salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Caesar Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                    <div class="salad-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/fruit_salad.avif">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Fruit Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$12.00</p>
+                        </div>
+                    </div>
+                    <div class="salad-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/lemonade salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Lemonade Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$14.00</p>
+                        </div>
+                    </div>
+                    <div class="salad-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/strawberry salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Strawberry Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$18.00</p>
+                        </div>
+                    </div>
+                    <div class="salad-dishes-card">
+                        <div class="dish-image-container">
+                            <img class="dish-image" src="images/salad/vegetable salad.jpg">
+                        </div>
+                        <div class="dish-description">
+                            <div class="food-name">
+                                <h3>Vegetable Salad</h3>
+                                <p class="stars">★★★★☆</p>
+                            </div>
+                            <p class="food-price">$20.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about">
+                <div class="about-us">
+                    <div class="about-text">
+                        <h1>About Us</h1>
+                        <div class="text-container">
+                            <p class="text">
+                            Welcome to FOODMAN Restaurant, where flavor meets tradition. Nestled in the heart of the city,
+                            we bring you a warm and inviting dining experience inspired by fresh, locally sourced ingredients and time-honored recipes.
+                            Whether you're here for a casual lunch, a family dinner, or a special celebration, our passionate team is dedicated to making every moment memorable.
+                            Come hungry, leave happy!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="about-images-section">
+                        <div class="about-img-container">
+                            <img class="about-img" src="restaurant_images/image4.jpg">
+                        </div>
+                        <div class="about-img-container">
+                            <img class="about-img" src="restaurant_images/restaurant_image3.jpg">
+                        </div>
+                        <div class="about-img-container">
+                            <img class="about-img" src="restaurant_images/restaurant_image1.jpg">
+                        </div>
+                        <div class="about-img-container">
+                            <img class="about-img" src="restaurant_images/restaurant_image2.jpg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+           <div class="footer-content">
+                <div class="footer-left">
+                    <div class="logo">
+                        <p><i class="fa-solid fa-utensils"></i> FoodMan</p>  
+                    </div>
+                    <div class="footer-text">
+                        <p>
+                            Dining &bull; Takeout &bull; Catering <br>
+                            Crafted with passion and flavor. <br>
+                            Visit us for unforgettable taste.
+                        </p>
+                    </div>
+                    <div class="social-icons">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" 
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" 
+                            viewBox="0 0 24 24">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" 
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" 
+                            viewBox="0 0 24 24">
+                            <path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v9h4v-9h3.6l.4-4H15V6a1 1 0 0 1 1-1h2z"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.4 1.6a9.09 9.09 0 0 1-2.88 1.1 4.52 4.52 0 0 0-7.7 4.13A12.84 12.84 0 0 1 3 2.6a4.5 4.5 0 0 0 1.4 6 4.52 4.52 0 0 1-2-.55v.06a4.51 4.51 0 0 0 3.6 4.42 4.52 4.52 0 0 1-2 .08 4.52 4.52 0 0 0 4.22 3.14A9.05 9.05 0 0 1 2 19.54 12.79 12.79 0 0 0 8.29 21c7.55 0 11.68-6.26 11.68-11.68v-.53A8.18 8.18 0 0 0 23 3z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer-middle">
+                    <h4>Opening hours</h4>
+                    <P>7:00 am - 9:00 pm</P>
+                </div>
+                <div class="footer-right">
+                    <h4>Address</h4>
+                    <a href="https://maps.google.com/?q=Your+Location" target="_blank" class="location" title="Find me">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="20" height="30">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21s7.5-6.136 7.5-11.25A7.5 7.5 0 0 0 4.5 9.75C4.5 14.864 12 21 12 21Z"/>
+                            <circle cx="12" cy="9.75" r="1.875"/>
+                        </svg>
+                        123 Food Street, Flavor Town
+                    </a>
+                    <a href="tel:+1234567890" class="phone" title="Call">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" width="20" height="30">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 4.5A2.25 2.25 0 0 1 4.5 2.25h2.25A2.25 2.25 0 0 1 9 4.5v2.108a2.25 2.25 0 0 1-.66 1.59l-1.2 1.2a15.75 15.75 0 0 0 7.462 7.462l1.2-1.2a2.25 2.25 0 0 1 1.59-.66H19.5a2.25 2.25 0 0 1 2.25 2.25v2.25A2.25 2.25 0 0 1 19.5 22.5C11.492 22.5 2.25 13.258 2.25 4.5Z"/>
+                        </svg>
+                        +233 264937600
+                    </a>
+                </div>
+           </div>
+           <p class="copyright">&copy 2025 FOODMAN RESTAURANT. All rights reserved</p>
+        </footer>
+
+        <script src="script/restaurant.js"></script>
+    </body>
+</html>
